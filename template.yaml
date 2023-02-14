@@ -1,16 +1,14 @@
-# Notice the v1beta3 version
-apiVersion: backstage.io/v1alpha1
+# Notice the v1beta2 version
+apiVersion: backstage.io/v1beta2
 kind: Template
 # some metadata about the template itself
 metadata:
   name: clean-architecture-app
   title: Test Action template
-  description: scaffolder v1beta3 template demo
+  description: scaffolder v1beta2 template demo
 spec:
   owner: backstage/techdocs-core
   type: service
-  lifecycle: production
-  system: public-websites
 
   # these are the steps which are rendered in the frontend with the form input
   parameters:
@@ -25,11 +23,6 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
-        owner:
-          title: Owner
-          type: string
-          description: Owner of the component
-          ui:field: OwnerPicker
     - title: Choose a location
       required:
         - repoUrl
@@ -51,7 +44,6 @@ spec:
         url: ./skeleton
         values:
           name: ${{ parameters.name }}
-          owner: ${{ parameters.owner }}
 
     - id: publish
       name: Publish
@@ -67,12 +59,3 @@ spec:
       input:
         repoContentsUrl: ${{ steps['publish'].output.repoContentsUrl }}
         catalogInfoPath: '/catalog-info.yaml'
-
-  # some outputs which are saved along with the job for use in the frontend
-  output:
-    links:
-      - title: Repository
-        url: ${{ steps['publish'].output.remoteUrl }}
-      - title: Open in catalog
-        icon: catalog
-        entityRef: ${{ steps['register'].output.entityRef }}
