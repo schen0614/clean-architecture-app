@@ -10,7 +10,6 @@ spec:
   owner: backstage/techdocs-core
   type: service
   lifecycle: production
-  owner: schen0614
   system: public-websites
 
   # these are the steps which are rendered in the frontend with the form input
