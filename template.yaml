@@ -1,4 +1,5 @@
 # Notice the v1beta3 version
+apiVersion: 'backstage.io/v1alpha1' | 'backstage.io/v1beta1'
 kind: Component
 # some metadata about the template itself
 metadata:
