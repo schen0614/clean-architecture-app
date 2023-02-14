@@ -3,7 +3,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Component
 # some metadata about the template itself
 metadata:
-  name: clean architecture app
+  name: clean-architecture-app
   title: Test Action template
   description: scaffolder v1beta3 template demo
 spec:
