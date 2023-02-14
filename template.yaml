@@ -1,6 +1,6 @@
 # Notice the v1beta3 version
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Template
 # some metadata about the template itself
 metadata:
   name: clean-architecture-app
