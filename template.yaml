@@ -1,5 +1,5 @@
-# Notice the v1beta2 version
-apiVersion: backstage.io/v1beta2
+# Notice the v1beta3 version
+apiVersion: backstage.io/v1beta3
 kind: Template
 # some metadata about the template itself
 metadata:
